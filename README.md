@@ -9,7 +9,7 @@ Project based on the second homework of the UE FIAB. This project is made of an 
 
 Elixir and git need to be installed to run and test the project.
 
-## project installation
+## Project installation
 
 clone the repo on a dedicated folder using the command bellow:
 
