@@ -74,12 +74,12 @@ alarm named temperature threshold is raised due to temperature = 33 on device nu
 # Structure
 
 - lib/alarm_server.ex -> callback module
-- lib/alarm.ex -> alarm strucure %Alarm{name,pid,func}
+- lib/alarm.ex -> alarm structure %Alarm{name,pid,func}
 - lib/data.ex -> data structure %Data{device_id,type,value}
 - lib/device.ex -> device structure %Device{id,name,localisation} but we can add other device description like device model
-- lib/main.ex -> interface for client with predevelopped scenarios and predevelopped function
-- lib/state.ex -> state module made of function related state handling (add_device, add_user, find_new_id, etc...)
-- test/state_test.exs -> test on state function
+- lib/main.ex -> interface for client with predevelopped scenarios and predevelopped functions
+- lib/state.ex -> state module made of functions related to state handling (add_device, add_user, find_new_id, etc...)
+- test/state_test.exs -> test on state functions
 
 ## Contributing
 
