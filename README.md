@@ -35,4 +35,59 @@ iex(1)>
 
 Then you will be able to try the predevelopped scenarios (first/second/third_scenario) and predevelopped functions (start, stop, create_device, search_devices, send_data, create_user, set_alarm) within Main module.
 
+# Run scenario 
+
+- The first scenario add three devices and search for devices located in brest. Find below how to run it:
+
+```cmd
+project_location> iex -S mix  
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Main.first_scenario()
+[0, 2]
+```
+
+- The second scenario add three devices create one user that set up an alarm for temperature > 30°C. Then, we send some temperature data from devices and raise some alarms. Find below how to run it:
+
+```cmd
+project_location> iex -S mix  
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Main.second_scenario() 
+alarm named temperature threshold is raised due to temperature = 35 on device number 1
+alarm named temperature threshold is raised due to temperature = 32 on device number 2
+alarm named temperature threshold is raised due to temperature = 33 on device number 1
+:ok
+```
+
+- The third scenario add three devices create one user that set up one alarm for temperature > 30°C and one alarm for pressure = 1bar. Then, we send some temperature and pressure data from devices and raise some alarms. Find below how to run it:
+
+```cmd
+project_location> iex -S mix  
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Main.third_scenario()  
+alarm named temperature threshold is raised due to temperature = 35 on device number 1
+alarm named temperature threshold is raised due to temperature = 32 on device number 2
+alarm named pressure value is raised due to pressure = 1 on device number 2
+alarm named temperature threshold is raised due to temperature = 33 on device number 1
+:ok
+```
+
+# Structure
+
+- lib/alarm_server.ex -> callback module
+- lib/alarm.ex -> alarm strucure %Alarm{name,pid,func}
+- lib/data.ex -> data structure %Data{device_id,type,value}
+- lib/device.ex -> device structure %Device{id,name,localisation} but we can add other device description like device model
+- lib/main.ex -> interface for client with predevelopped scenarios and predevelopped function
+- lib/state.ex -> state module made of function related state handling (add_device, add_user, find_new_id, etc...)
+- test/state_test.exs -> test on state function
+
+## Contributing
+
+If you want to contribute and add some device information, you can use mix test tool. To do so, you just have to put your tests within the test folder and run the command below:
+
+```cmd
+project_location> mix test
+```
+
+It will help you inspect the output of your new implementations
 
