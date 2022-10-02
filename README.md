@@ -81,7 +81,7 @@ alarm named temperature threshold is raised due to temperature = 33 on device nu
 - lib/state.ex -> state module made of functions related to state handling (add_device, add_user, find_new_id, etc...)
 - test/state_test.exs -> test on state functions
 
-## Contributing
+# Contributing
 
 If you want to contribute and add some device information, you can use mix test tool. To do so, you just have to put your tests within the test folder and run the command below:
 
