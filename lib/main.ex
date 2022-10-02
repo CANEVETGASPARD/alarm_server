@@ -52,7 +52,6 @@ defmodule Main do
     create_device("device1","nantes")
     create_device("device2","brest")
     search_devices(fn device -> device.localisation == "brest" end)
-    stop()
   end
 
 
