@@ -24,7 +24,7 @@ Use your command line interpreter and move to the project directory and run the 
 ```cmd
 project_location> mix compile
 Compiling 1 file (.ex)
-Generated expression_parser app
+Generated alarm_server app
 ```
 
 ```cmd
