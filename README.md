@@ -35,7 +35,7 @@ iex(1)>
 
 Then you will be able to try the predevelopped scenarios (first/second/third_scenario) and predevelopped functions (start, stop, create_device, search_devices, send_data, create_user, set_alarm) within Main module.
 
-# Run scenario 
+## Run scenario 
 
 - The first scenario add three devices and search for devices located in brest. Find below how to run it:
 
@@ -71,7 +71,7 @@ alarm named temperature threshold is raised due to temperature = 33 on device nu
 :ok
 ```
 
-# Structure
+## Structure
 
 - lib/alarm_server.ex -> callback module
 - lib/alarm.ex -> alarm structure %Alarm{name,pid,func}
@@ -81,7 +81,7 @@ alarm named temperature threshold is raised due to temperature = 33 on device nu
 - lib/state.ex -> state module made of functions related to state handling (add_device, add_user, find_new_id, etc...)
 - test/state_test.exs -> test on state functions
 
-# Contributing
+## Contributing
 
 If you want to contribute and add some device information, you can use mix test tool. To do so, you just have to put your tests within the test folder and run the command below:
 
